@@ -1,0 +1,6 @@
+{
+  "code": "import Dictionary from \"./Dictionary\";\r\nexport default class Graph {\r\n    constructor(isDirected = false) {\r\n        this.isDirected = isDirected;\r\n        this.vertices = [];\r\n        this.adjList = new Dictionary();\r\n    }\r\n    addVertex(v) {\r\n        if (this.vertices.indexOf(v) == -1) {\r\n            this.vertices.push(v);\r\n            this.adjList.set(v, []);\r\n        }\r\n    }\r\n    addEdge(a, b) {\r\n        if (!this.adjList.get(a))\r\n            this.addVertex(a);\r\n        if (!this.adjList.get(b))\r\n            this.addVertex(b);\r\n        this.adjList.get(a).push(b);\r\n        if (!this.isDirected)\r\n            this.adjList.get(b).push(a);\r\n    }\r\n    getVertices() {\r\n        return this.vertices;\r\n    }\r\n    getAdjList() {\r\n        return this.adjList;\r\n    }\r\n    toString() {\r\n        let s = '';\r\n        for (let i = 0; i < this.vertices.length; i++) {\r\n            s += this.vertices[i] + '->';\r\n            const neighbors = this.adjList.get(this.vertices[i]);\r\n            for (let j = 0; j < neighbors.length; j++)\r\n                s += neighbors[j] + ' ';\r\n            s += '\\n';\r\n        }\r\n        return s;\r\n    }\r\n}\r\n",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/src/data_structures/Dictionary.ts"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "code": "export class DestructionListener {\r\n    SayGoodbyeJoint(params) {\r\n        params.m_userData && (params.m_userData.isDestroy = true);\r\n    }\r\n    SayGoodbyeFixture(params) {\r\n    }\r\n    SayGoodbyeParticleGroup(params) {\r\n    }\r\n    SayGoodbyeParticle(params) {\r\n    }\r\n}\r\n//# sourceMappingURL=DestructionListener.js.map",
+  "references": [],
+  "map": "{\"version\":3,\"file\":\"DestructionListener.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../libs/laya/physics/DestructionListener.ts\"],\"names\":[],\"mappings\":\"AAKI,MAAM,OAAO,mBAAmB;IAKrB,eAAe,CAAC,MAAU;QAC7B,MAAM,CAAC,UAAU,IAAE,CAAC,MAAM,CAAC,UAAU,CAAC,SAAS,GAAG,IAAI,CAAC,CAAC;IAC5D,CAAC;IAKM,iBAAiB,CAAC,MAAU;IAEnC,CAAC;IAKM,uBAAuB,CAAC,MAAU;IAEzC,CAAC;IAKM,kBAAkB,CAAC,MAAU;IAEpC,CAAC;CACJ\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/physics/DestructionListener.d.ts",
+    "writeByteOrderMark": false,
+    "text": "export declare class DestructionListener {\r\n    SayGoodbyeJoint(params: any): void;\r\n    SayGoodbyeFixture(params: any): void;\r\n    SayGoodbyeParticleGroup(params: any): void;\r\n    SayGoodbyeParticle(params: any): void;\r\n}\r\n"
+  }
+}

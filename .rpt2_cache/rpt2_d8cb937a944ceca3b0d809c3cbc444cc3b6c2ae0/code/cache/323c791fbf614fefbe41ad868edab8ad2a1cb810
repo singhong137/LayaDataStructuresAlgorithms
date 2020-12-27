@@ -1,0 +1,7 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nimport Dictionary from \"../data_structures/Dictionary\";\r\nexport default class DictionaryTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        console.log('DictionaryTest');\r\n        const dictionary = new Dictionary();\r\n        dictionary.set('Gandalf', 'gandalf@email.com');\r\n        dictionary.set('John', 'johnsnow@email.com');\r\n        dictionary.set('Tyrion', 'tyrion@email.com');\r\n        console.log(dictionary.hasKey('Gandalf'));\r\n        console.log(dictionary.size());\r\n        console.log(dictionary.keys());\r\n        console.log(dictionary.values());\r\n        console.log(dictionary.get('Tyrion'));\r\n        dictionary.remove('John');\r\n        console.log(dictionary.keys());\r\n        console.log(dictionary.values());\r\n        console.log(dictionary.keyValues());\r\n        dictionary.forEach((k, v) => { console.log('forEach: ', `key:${k},value:${v}`); });\r\n    }\r\n}\r\n",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/src/data_structures/Dictionary.ts"
+  ]
+}

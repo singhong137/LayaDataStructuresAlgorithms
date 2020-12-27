@@ -1,0 +1,5 @@
+{
+  "code": "export function minCoinChangeGreedy(coins, amount) {\r\n    const change = [];\r\n    let total = 0;\r\n    for (let i = coins.length; i >= 0; i--) {\r\n        const coin = coins[i];\r\n        while (total + coin <= amount) {\r\n            change.push(coin);\r\n            total += coin;\r\n        }\r\n    }\r\n    return change;\r\n}\r\n//# sourceMappingURL=min-coin-changeGreedy.js.map",
+  "references": [],
+  "map": "{\"version\":3,\"file\":\"min-coin-changeGreedy.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../src/algorithms/greedy/min-coin-changeGreedy.ts\"],\"names\":[],\"mappings\":\"AAAA,MAAM,UAAU,mBAAmB,CAAC,KAAe,EAAE,MAAc;IAC/D,MAAM,MAAM,GAAa,EAAE,CAAC;IAC5B,IAAI,KAAK,GAAG,CAAC,CAAC;IACd,KAAK,IAAI,CAAC,GAAG,KAAK,CAAC,MAAM,EAAE,CAAC,IAAI,CAAC,EAAE,CAAC,EAAE,EAAE;QACpC,MAAM,IAAI,GAAG,KAAK,CAAC,CAAC,CAAC,CAAC;QACtB,OAAO,KAAK,GAAG,IAAI,IAAI,MAAM,EAAE;YAC3B,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;YAClB,KAAK,IAAI,IAAI,CAAC;SACjB;KACJ;IACD,OAAO,MAAM,CAAC;AAClB,CAAC\"}"
+}

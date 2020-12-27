@@ -1,0 +1,13 @@
+{
+  "code": "import { Pool } from \"../../utils/Pool\";\r\nexport class ScaleCmd {\r\n    static create(scaleX, scaleY, pivotX, pivotY) {\r\n        var cmd = Pool.getItemByClass(\"ScaleCmd\", ScaleCmd);\r\n        cmd.scaleX = scaleX;\r\n        cmd.scaleY = scaleY;\r\n        cmd.pivotX = pivotX;\r\n        cmd.pivotY = pivotY;\r\n        return cmd;\r\n    }\r\n    recover() {\r\n        Pool.recover(\"ScaleCmd\", this);\r\n    }\r\n    run(context, gx, gy) {\r\n        context._scale(this.scaleX, this.scaleY, this.pivotX + gx, this.pivotY + gy);\r\n    }\r\n    get cmdID() {\r\n        return ScaleCmd.ID;\r\n    }\r\n}\r\nScaleCmd.ID = \"Scale\";\r\n//# sourceMappingURL=ScaleCmd.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/resource/Context.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/Pool.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"ScaleCmd.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../libs/laya/display/cmd/ScaleCmd.ts\"],\"names\":[],\"mappings\":\"AACA,OAAO,EAAE,IAAI,EAAE,MAAM,kBAAkB,CAAA;AAIvC,MAAM,OAAO,QAAQ;IAqBjB,MAAM,CAAC,MAAM,CAAC,MAAc,EAAE,MAAc,EAAE,MAAc,EAAE,MAAc;QACxE,IAAI,GAAG,GAAa,IAAI,CAAC,cAAc,CAAC,UAAU,EAAE,QAAQ,CAAC,CAAC;QAC9D,GAAG,CAAC,MAAM,GAAG,MAAM,CAAC;QACpB,GAAG,CAAC,MAAM,GAAG,MAAM,CAAC;QACpB,GAAG,CAAC,MAAM,GAAG,MAAM,CAAC;QACpB,GAAG,CAAC,MAAM,GAAG,MAAM,CAAC;QACpB,OAAO,GAAG,CAAC;IACf,CAAC;IAKD,OAAO;QAEH,IAAI,CAAC,OAAO,CAAC,UAAU,EAAE,IAAI,CAAC,CAAC;IACnC,CAAC;IAGD,GAAG,CAAC,OAAgB,EAAE,EAAU,EAAE,EAAU;QACxC,OAAO,CAAC,MAAM,CAAC,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,GAAG,EAAE,EAAE,IAAI,CAAC,MAAM,GAAG,EAAE,CAAC,CAAC;IACjF,CAAC;IAGD,IAAI,KAAK;QACL,OAAO,QAAQ,CAAC,EAAE,CAAC;IACvB,CAAC;;AA7CM,WAAE,GAAW,OAAO,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/display/cmd/ScaleCmd.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { Context } from \"../../resource/Context\";\r\nexport declare class ScaleCmd {\r\n    static ID: string;\r\n    scaleX: number;\r\n    scaleY: number;\r\n    pivotX: number;\r\n    pivotY: number;\r\n    static create(scaleX: number, scaleY: number, pivotX: number, pivotY: number): ScaleCmd;\r\n    recover(): void;\r\n    run(context: Context, gx: number, gy: number): void;\r\n    readonly cmdID: string;\r\n}\r\n"
+  }
+}

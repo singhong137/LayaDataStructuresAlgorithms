@@ -1,0 +1,13 @@
+{
+  "code": "import { Value2D } from \"./Value2D\";\r\nimport { ShaderDefines2D } from \"../ShaderDefines2D\";\r\nexport class PrimitiveSV extends Value2D {\r\n    constructor(args) {\r\n        super(ShaderDefines2D.PRIMITIVE, 0);\r\n        this._attribLocation = ['position', 0, 'attribColor', 1];\r\n    }\r\n}\r\n//# sourceMappingURL=PrimitiveSV.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/webgl/shader/d2/value/Value2D.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/webgl/shader/d2/ShaderDefines2D.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"PrimitiveSV.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../../../libs/laya/webgl/shader/d2/value/PrimitiveSV.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,WAAW,CAAC;AACpC,OAAO,EAAE,eAAe,EAAE,MAAM,oBAAoB,CAAA;AAEpD,MAAM,OAAO,WAAY,SAAQ,OAAO;IACpC,YAAY,IAAQ;QAChB,KAAK,CAAC,eAAe,CAAC,SAAS,EAAC,CAAC,CAAC,CAAC;QACnC,IAAI,CAAC,eAAe,GAAG,CAAC,UAAU,EAAE,CAAC,EAAE,aAAa,EAAE,CAAC,CAAC,CAAC;IAC7D,CAAC;CACJ\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/webgl/shader/d2/value/PrimitiveSV.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { Value2D } from \"./Value2D\";\r\nexport declare class PrimitiveSV extends Value2D {\r\n    constructor(args: any);\r\n}\r\n"
+  }
+}

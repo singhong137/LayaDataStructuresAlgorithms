@@ -1,0 +1,14 @@
+{
+  "code": "import { Pool } from \"../../utils/Pool\";\r\nexport class DrawImageCmd {\r\n    static create(texture, x, y, width, height) {\r\n        var cmd = Pool.getItemByClass(\"DrawImageCmd\", DrawImageCmd);\r\n        cmd.texture = texture;\r\n        texture._addReference();\r\n        cmd.x = x;\r\n        cmd.y = y;\r\n        cmd.width = width;\r\n        cmd.height = height;\r\n        return cmd;\r\n    }\r\n    recover() {\r\n        this.texture && this.texture._removeReference();\r\n        this.texture = null;\r\n        Pool.recover(\"DrawImageCmd\", this);\r\n    }\r\n    run(context, gx, gy) {\r\n        if (this.texture)\r\n            context.drawTexture(this.texture, this.x + gx, this.y + gy, this.width, this.height);\r\n    }\r\n    get cmdID() {\r\n        return DrawImageCmd.ID;\r\n    }\r\n}\r\nDrawImageCmd.ID = \"DrawImage\";\r\n//# sourceMappingURL=DrawImageCmd.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/resource/Context.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/resource/Texture.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/Pool.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"DrawImageCmd.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../libs/laya/display/cmd/DrawImageCmd.ts\"],\"names\":[],\"mappings\":\"AAEA,OAAO,EAAE,IAAI,EAAE,MAAM,kBAAkB,CAAA;AAKvC,MAAM,OAAO,YAAY;IAyBrB,MAAM,CAAC,MAAM,CAAC,OAAgB,EAAE,CAAS,EAAE,CAAS,EAAE,KAAa,EAAE,MAAc;QAC/E,IAAI,GAAG,GAAiB,IAAI,CAAC,cAAc,CAAC,cAAc,EAAE,YAAY,CAAC,CAAC;QAC1E,GAAG,CAAC,OAAO,GAAG,OAAO,CAAC;QACtB,OAAO,CAAC,aAAa,EAAE,CAAC;QACxB,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC;QACV,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC;QACV,GAAG,CAAC,KAAK,GAAG,KAAK,CAAC;QAClB,GAAG,CAAC,MAAM,GAAG,MAAM,CAAC;QACpB,OAAO,GAAG,CAAC;IACf,CAAC;IAKD,OAAO;QACH,IAAI,CAAC,OAAO,IAAI,IAAI,CAAC,OAAO,CAAC,gBAAgB,EAAE,CAAC;QAChD,IAAI,CAAC,OAAO,GAAG,IAAI,CAAC;QACpB,IAAI,CAAC,OAAO,CAAC,cAAc,EAAE,IAAI,CAAC,CAAC;IACvC,CAAC;IAGD,GAAG,CAAC,OAAgB,EAAE,EAAU,EAAE,EAAU;QAC9C,IAAG,IAAI,CAAC,OAAO;YACR,OAAO,CAAC,WAAW,CAAC,IAAI,CAAC,OAAO,EAAE,IAAI,CAAC,CAAC,GAAG,EAAE,EAAE,IAAI,CAAC,CAAC,GAAG,EAAE,EAAE,IAAI,CAAC,KAAK,EAAE,IAAI,CAAC,MAAM,CAAC,CAAC;IAC1F,CAAC;IAGD,IAAI,KAAK;QACL,OAAO,YAAY,CAAC,EAAE,CAAC;IAC3B,CAAC;;AArDM,eAAE,GAAW,WAAW,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/display/cmd/DrawImageCmd.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { Context } from \"../../resource/Context\";\r\nimport { Texture } from \"../../resource/Texture\";\r\nexport declare class DrawImageCmd {\r\n    static ID: string;\r\n    texture: Texture | null;\r\n    x: number;\r\n    y: number;\r\n    width: number;\r\n    height: number;\r\n    static create(texture: Texture, x: number, y: number, width: number, height: number): DrawImageCmd;\r\n    recover(): void;\r\n    run(context: Context, gx: number, gy: number): void;\r\n    readonly cmdID: string;\r\n}\r\n"
+  }
+}

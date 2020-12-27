@@ -1,0 +1,4 @@
+{
+  "code": "export default class Stack {\r\n    constructor() {\r\n        this.items = [];\r\n    }\r\n    push(element) {\r\n        this.items.push(element);\r\n    }\r\n    pop() {\r\n        return this.items.pop();\r\n    }\r\n    peek() {\r\n        return this.items[this.items.length - 1];\r\n    }\r\n    isEmpty() {\r\n        return this.items.length == 0;\r\n    }\r\n    clear() {\r\n        this.items = [];\r\n    }\r\n    size() {\r\n        return this.items.length;\r\n    }\r\n}\r\n",
+  "references": []
+}

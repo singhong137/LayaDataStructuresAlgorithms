@@ -1,0 +1,7 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nexport default class DynamicProgramingTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        console.log('DynamicProgramingTest~~~');\r\n        console.time('a');\r\n        for (let i = 0; i < 1000; i++)\r\n            i + (i / 3) | 0;\r\n        console.timeEnd('a');\r\n        console.time('b');\r\n        for (let i = 0; i < 1000; i++)\r\n            i + Math.floor(i / 3);\r\n        console.timeEnd('b');\r\n    }\r\n}\r\n//# sourceMappingURL=DynamicProgramingTest.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"DynamicProgramingTest.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/DynamicProgramingTest.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAEhD,MAAM,CAAC,OAAO,OAAO,qBAAsB,SAAQ,MAAM;IACrD;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAED,QAAQ;QACJ,OAAO,CAAC,GAAG,CAAC,0BAA0B,CAAC,CAAC;QAExC,OAAO,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;QAClB,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,IAAI,EAAE,CAAC,EAAE;YAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC;QAC9C,OAAO,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC;QAErB,OAAO,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;QAClB,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,IAAI,EAAE,CAAC,EAAE;YAAC,CAAC,GAAG,IAAI,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC;QACpD,OAAO,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC;IACzB,CAAC;CACJ\"}"
+}

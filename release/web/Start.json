@@ -1,0 +1,1 @@
+{"type":"Scene","props":{"width":640,"height":1136},"compId":2,"child":[{"type":"Button","props":{"y":544.5,"x":256,"skin":"comp/button.png","name":"btn","label":"label"},"compId":3,"child":[{"type":"Script","props":{"runtime":"script/Start.ts"},"compId":4}]}],"loadList":["comp/button.png"],"loadList3D":[]}

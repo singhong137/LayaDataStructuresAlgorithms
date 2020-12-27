@@ -1,0 +1,6 @@
+<page>
+   <item name="test/TestScene.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="test/SortingScene.scene" props="" ifExport="Default" aName=""/>
+   <item name="test/SearchScene.scene" props="" ifExport="Default" aName=""/>
+   <item name="test/DynamicProgramingScene.scene" props="" ifExport="Default" aName=""/>
+</page>

@@ -1,0 +1,14 @@
+{
+  "code": "import { Pool } from \"../../utils/Pool\";\r\nexport class DrawTexturesCmd {\r\n    static create(texture, pos) {\r\n        var cmd = Pool.getItemByClass(\"DrawTexturesCmd\", DrawTexturesCmd);\r\n        cmd.texture = texture;\r\n        texture._addReference();\r\n        cmd.pos = pos;\r\n        return cmd;\r\n    }\r\n    recover() {\r\n        this.texture._removeReference();\r\n        this.texture = null;\r\n        this.pos = null;\r\n        Pool.recover(\"DrawTexturesCmd\", this);\r\n    }\r\n    run(context, gx, gy) {\r\n        context.drawTextures(this.texture, this.pos, gx, gy);\r\n    }\r\n    get cmdID() {\r\n        return DrawTexturesCmd.ID;\r\n    }\r\n}\r\nDrawTexturesCmd.ID = \"DrawTextures\";\r\n//# sourceMappingURL=DrawTexturesCmd.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/resource/Context.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/resource/Texture.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/Pool.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"DrawTexturesCmd.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../libs/laya/display/cmd/DrawTexturesCmd.ts\"],\"names\":[],\"mappings\":\"AAEA,OAAO,EAAE,IAAI,EAAE,MAAM,kBAAkB,CAAA;AAKvC,MAAM,OAAO,eAAe;IAaxB,MAAM,CAAC,MAAM,CAAC,OAAgB,EAAE,GAAU;QACtC,IAAI,GAAG,GAAoB,IAAI,CAAC,cAAc,CAAC,iBAAiB,EAAE,eAAe,CAAC,CAAC;QACnF,GAAG,CAAC,OAAO,GAAG,OAAO,CAAC;QACtB,OAAO,CAAC,aAAa,EAAE,CAAC;QACxB,GAAG,CAAC,GAAG,GAAG,GAAG,CAAC;QACd,OAAO,GAAG,CAAC;IACf,CAAC;IAKD,OAAO;QACH,IAAI,CAAC,OAAO,CAAC,gBAAgB,EAAE,CAAC;QAChC,IAAI,CAAC,OAAO,GAAG,IAAI,CAAC;QACpB,IAAI,CAAC,GAAG,GAAG,IAAI,CAAC;QAChB,IAAI,CAAC,OAAO,CAAC,iBAAiB,EAAE,IAAI,CAAC,CAAC;IAC1C,CAAC;IAGD,GAAG,CAAC,OAAgB,EAAE,EAAU,EAAE,EAAU;QACxC,OAAO,CAAC,YAAY,CAAC,IAAI,CAAC,OAAO,EAAE,IAAI,CAAC,GAAG,EAAE,EAAE,EAAE,EAAE,CAAC,CAAC;IACzD,CAAC;IAGD,IAAI,KAAK;QACL,OAAO,eAAe,CAAC,EAAE,CAAC;IAC9B,CAAC;;AAtCM,kBAAE,GAAW,cAAc,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/display/cmd/DrawTexturesCmd.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { Context } from \"../../resource/Context\";\r\nimport { Texture } from \"../../resource/Texture\";\r\nexport declare class DrawTexturesCmd {\r\n    static ID: string;\r\n    texture: Texture;\r\n    pos: any[];\r\n    static create(texture: Texture, pos: any[]): DrawTexturesCmd;\r\n    recover(): void;\r\n    run(context: Context, gx: number, gy: number): void;\r\n    readonly cmdID: string;\r\n}\r\n"
+  }
+}

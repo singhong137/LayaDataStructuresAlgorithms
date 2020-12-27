@@ -1,0 +1,8 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nimport { ratInAMaze } from \"../algorithms/back-tracking/rat-in-maze\";\r\nexport default class BackTracingTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        console.log('BackTracingTest~~~');\r\n        const maze = [\r\n            [1, 0, 0, 0],\r\n            [1, 1, 1, 1],\r\n            [0, 0, 1, 0],\r\n            [0, 1, 1, 1]\r\n        ];\r\n        console.log('ratInAMaze: ', ratInAMaze(maze));\r\n    }\r\n}\r\n//# sourceMappingURL=BackTracingTest.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/src/algorithms/back-tracking/rat-in-maze.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"BackTracingTest.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/BackTracingTest.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAChD,OAAO,EAAE,UAAU,EAAE,MAAM,yCAAyC,CAAC;AAGrE,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,MAAM;IAC/C;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAED,QAAQ;QACJ,OAAO,CAAC,GAAG,CAAC,oBAAoB,CAAC,CAAC;QAElC,MAAM,IAAI,GAAG;YACT,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC;YACZ,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC;YACZ,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC;YACZ,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC;SACf,CAAC;QAEF,OAAO,CAAC,GAAG,CAAC,cAAc,EAAE,UAAU,CAAC,IAAI,CAAC,CAAC,CAAC;IAClD,CAAC;CACJ\"}"
+}

@@ -1,0 +1,10 @@
+{
+  "code": "export var FilterMode;\r\n(function (FilterMode) {\r\n    FilterMode[FilterMode[\"Point\"] = 0] = \"Point\";\r\n    FilterMode[FilterMode[\"Bilinear\"] = 1] = \"Bilinear\";\r\n    FilterMode[FilterMode[\"Trilinear\"] = 2] = \"Trilinear\";\r\n})(FilterMode || (FilterMode = {}));\r\n//# sourceMappingURL=FilterMode.js.map",
+  "references": [],
+  "map": "{\"version\":3,\"file\":\"FilterMode.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../libs/laya/resource/FilterMode.ts\"],\"names\":[],\"mappings\":\"AAGA,MAAM,CAAN,IAAY,UAOX;AAPD,WAAY,UAAU;IAElB,6CAAS,CAAA;IAET,mDAAY,CAAA;IAEZ,qDAAa,CAAA;AACjB,CAAC,EAPW,UAAU,KAAV,UAAU,QAOrB\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/resource/FilterMode.d.ts",
+    "writeByteOrderMark": false,
+    "text": "export declare enum FilterMode {\r\n    Point = 0,\r\n    Bilinear = 1,\r\n    Trilinear = 2\r\n}\r\n"
+  }
+}

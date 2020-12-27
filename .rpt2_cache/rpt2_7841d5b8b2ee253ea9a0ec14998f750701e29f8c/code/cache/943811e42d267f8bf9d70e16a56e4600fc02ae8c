@@ -1,0 +1,13 @@
+{
+  "code": "import { Pool } from \"../../utils/Pool\";\r\nexport class RotateCmd {\r\n    static create(angle, pivotX, pivotY) {\r\n        var cmd = Pool.getItemByClass(\"RotateCmd\", RotateCmd);\r\n        cmd.angle = angle;\r\n        cmd.pivotX = pivotX;\r\n        cmd.pivotY = pivotY;\r\n        return cmd;\r\n    }\r\n    recover() {\r\n        Pool.recover(\"RotateCmd\", this);\r\n    }\r\n    run(context, gx, gy) {\r\n        context._rotate(this.angle, this.pivotX + gx, this.pivotY + gy);\r\n    }\r\n    get cmdID() {\r\n        return RotateCmd.ID;\r\n    }\r\n}\r\nRotateCmd.ID = \"Rotate\";\r\n//# sourceMappingURL=RotateCmd.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/resource/Context.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/Pool.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"RotateCmd.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../libs/laya/display/cmd/RotateCmd.ts\"],\"names\":[],\"mappings\":\"AACA,OAAO,EAAE,IAAI,EAAE,MAAM,kBAAkB,CAAA;AAKvC,MAAM,OAAO,SAAS;IAiBlB,MAAM,CAAC,MAAM,CAAC,KAAa,EAAE,MAAc,EAAE,MAAc;QACvD,IAAI,GAAG,GAAc,IAAI,CAAC,cAAc,CAAC,WAAW,EAAE,SAAS,CAAC,CAAC;QACjE,GAAG,CAAC,KAAK,GAAG,KAAK,CAAC;QAClB,GAAG,CAAC,MAAM,GAAG,MAAM,CAAC;QACpB,GAAG,CAAC,MAAM,GAAG,MAAM,CAAC;QACpB,OAAO,GAAG,CAAC;IACf,CAAC;IAKD,OAAO;QAEH,IAAI,CAAC,OAAO,CAAC,WAAW,EAAE,IAAI,CAAC,CAAC;IACpC,CAAC;IAGD,GAAG,CAAC,OAAgB,EAAE,EAAU,EAAE,EAAU;QACxC,OAAO,CAAC,OAAO,CAAC,IAAI,CAAC,KAAK,EAAE,IAAI,CAAC,MAAM,GAAG,EAAE,EAAE,IAAI,CAAC,MAAM,GAAG,EAAE,CAAC,CAAC;IACpE,CAAC;IAGD,IAAI,KAAK;QACL,OAAO,SAAS,CAAC,EAAE,CAAC;IACxB,CAAC;;AAxCM,YAAE,GAAW,QAAQ,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/display/cmd/RotateCmd.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { Context } from \"../../resource/Context\";\r\nexport declare class RotateCmd {\r\n    static ID: string;\r\n    angle: number;\r\n    pivotX: number;\r\n    pivotY: number;\r\n    static create(angle: number, pivotX: number, pivotY: number): RotateCmd;\r\n    recover(): void;\r\n    run(context: Context, gx: number, gy: number): void;\r\n    readonly cmdID: string;\r\n}\r\n"
+  }
+}
