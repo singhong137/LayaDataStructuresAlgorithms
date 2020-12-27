@@ -11,6 +11,8 @@ export default class UnitConsole extends Script {
     }
 
     onEnable() {
+        console.log(`array's methods~~~`);
+
         console.time('a1')
         let aa = 1;
         for (let i: number = 0; i < 1000; i++) {

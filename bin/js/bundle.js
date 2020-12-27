@@ -219,6 +219,7 @@ window.Laya=window.Laya||{};
             const lalala = 9;
         }
         onEnable() {
+            console.log(`array's methods~~~`);
             console.time('a1');
             let aa = 1;
             for (let i = 0; i < 1000; i++) {
