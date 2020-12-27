@@ -1,0 +1,7 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nimport Graph from \"../data_structures/Graph\";\r\nexport default class GraphTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        console.log('GraphTest---');\r\n        const graph = new Graph();\r\n        const myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];\r\n        for (let i = 0; i < myVertices.length; i++)\r\n            graph.addVertex(myVertices[i]);\r\n        graph.addEdge('A', 'B');\r\n        graph.addEdge('A', 'C');\r\n        graph.addEdge('A', 'D');\r\n        graph.addEdge('C', 'D');\r\n        graph.addEdge('C', 'G');\r\n        graph.addEdge('D', 'G');\r\n        graph.addEdge('D', 'H');\r\n        graph.addEdge('B', 'E');\r\n        graph.addEdge('B', 'F');\r\n        graph.addEdge('E', 'I');\r\n        graph.addEdge('C', 'D');\r\n        graph.addEdge('B', 'E');\r\n        graph.addEdge('A', 'D');\r\n        console.log('********* printing graph ***********');\r\n        console.log(graph.toString());\r\n    }\r\n}\r\n",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/src/data_structures/Graph.ts"
+  ]
+}

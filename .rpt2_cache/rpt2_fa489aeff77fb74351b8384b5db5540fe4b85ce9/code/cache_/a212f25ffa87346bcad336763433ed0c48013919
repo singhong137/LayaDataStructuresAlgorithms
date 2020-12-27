@@ -1,0 +1,7 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nexport class BackTracingTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        console.log('BackTracingTest~~~');\r\n    }\r\n}\r\n//# sourceMappingURL=BackTracingTest.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"BackTracingTest.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/BackTracingTest.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAEhD,MAAM,OAAO,eAAgB,SAAQ,MAAM;IACvC;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAED,QAAQ;QACJ,OAAO,CAAC,GAAG,CAAC,oBAAoB,CAAC,CAAC;IACtC,CAAC;CACJ\"}"
+}

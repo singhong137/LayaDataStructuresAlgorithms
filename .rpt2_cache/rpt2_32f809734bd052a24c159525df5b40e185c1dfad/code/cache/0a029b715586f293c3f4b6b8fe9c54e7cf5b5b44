@@ -1,0 +1,7 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nexport default class SearchTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        console.log('SearchTest~~~');\r\n    }\r\n}\r\n//# sourceMappingURL=SearchTest.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"SearchTest.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/SearchTest.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAEhD,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,MAAM;IAC1C;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAED,QAAQ;QACJ,OAAO,CAAC,GAAG,CAAC,eAAe,CAAC,CAAC;IACjC,CAAC;CACJ\"}"
+}

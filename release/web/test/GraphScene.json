@@ -1,0 +1,1 @@
+{"type":"Scene","props":{"width":640,"height":1136},"compId":2,"child":[{"type":"Script","props":{"runtime":"script/GraphTest.ts"},"compId":3},{"type":"Sprite","props":{"y":357,"x":270,"texture":"test/b1.png"},"compId":4}],"loadList":["test/b1.png"],"loadList3D":[]}

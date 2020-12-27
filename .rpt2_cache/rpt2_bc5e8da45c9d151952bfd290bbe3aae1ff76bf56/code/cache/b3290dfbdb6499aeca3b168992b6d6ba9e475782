@@ -1,0 +1,15 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nexport default class GameControl extends Script {\r\n    constructor() { super(); }\r\n    onEnable() {\r\n        console.log('gate ', new Date().getTime());\r\n    }\r\n    onUpdate() {\r\n    }\r\n    onStageClick(e) {\r\n    }\r\n}\r\n//# sourceMappingURL=GameControl.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/src/script/Bullet.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Prefab.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/display/Sprite.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/Pool.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/Laya.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/events/Event.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/display/EffectAnimation.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/src/ui/layaMaxUI.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"GameControl.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/GameControl.ts\"],\"names\":[],\"mappings\":\"AACA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAYhD,MAAM,CAAC,OAAO,OAAO,WAAY,SAAQ,MAAM;IAE3C,gBAAgB,KAAK,EAAE,CAAC,CAAC,CAAC;IAE1B,QAAQ;QACL,OAAO,CAAC,GAAG,CAAC,OAAO,EAAC,IAAI,IAAI,EAAE,CAAC,OAAO,EAAE,CAAC,CAAC;IAC7C,CAAC;IAED,QAAQ;IAER,CAAC;IAED,YAAY,CAAC,CAAQ;IAErB,CAAC;CACJ\"}"
+}

@@ -1,0 +1,10 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nimport { Pool } from \"laya/utils/Pool\";\r\nimport { RigidBody } from \"laya/physics/RigidBody\";\r\nexport default class Bullet extends Script {\r\n    constructor() { super(); }\r\n    onEnable() {\r\n        var rig = this.owner.getComponent(RigidBody);\r\n        rig.setVelocity({ x: 0, y: -10 });\r\n    }\r\n    onTriggerEnter(other, self, contact) {\r\n        this.owner.removeSelf();\r\n    }\r\n    onUpdate() {\r\n        if (this.owner.y < -10) {\r\n            this.owner.removeSelf();\r\n        }\r\n    }\r\n    onDisable() {\r\n        Pool.recover(\"bullet\", this.owner);\r\n    }\r\n}\r\n//# sourceMappingURL=Bullet.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/display/Sprite.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/Pool.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/physics/RigidBody.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"Bullet.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/Bullet.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAEhD,OAAO,EAAE,IAAI,EAAE,MAAM,iBAAiB,CAAC;AACvC,OAAO,EAAE,SAAS,EAAE,MAAM,wBAAwB,CAAC;AAKnD,MAAM,CAAC,OAAO,OAAO,MAAO,SAAQ,MAAM;IACtC,gBAAgB,KAAK,EAAE,CAAC,CAAC,CAAC;IAE1B,QAAQ;QAEJ,IAAI,GAAG,GAAc,IAAI,CAAC,KAAK,CAAC,YAAY,CAAC,SAAS,CAAC,CAAC;QACxD,GAAG,CAAC,WAAW,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,EAAE,CAAC,CAAC;IACtC,CAAC;IAED,cAAc,CAAC,KAAU,EAAE,IAAS,EAAE,OAAY;QAE9C,IAAI,CAAC,KAAK,CAAC,UAAU,EAAE,CAAC;IAC5B,CAAC;IAED,QAAQ;QAEJ,IAAK,IAAI,CAAC,KAAgB,CAAC,CAAC,GAAG,CAAC,EAAE,EAAE;YAChC,IAAI,CAAC,KAAK,CAAC,UAAU,EAAE,CAAC;SAC3B;IACL,CAAC;IAED,SAAS;QAEL,IAAI,CAAC,OAAO,CAAC,QAAQ,EAAE,IAAI,CAAC,KAAK,CAAC,CAAC;IACvC,CAAC;CACJ\"}"
+}

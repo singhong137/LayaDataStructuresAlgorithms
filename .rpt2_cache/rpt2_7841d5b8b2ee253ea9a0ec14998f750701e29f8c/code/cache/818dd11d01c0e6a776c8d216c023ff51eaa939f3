@@ -1,0 +1,15 @@
+{
+  "code": "import { SaveBase } from \"./SaveBase\";\r\nimport { Matrix } from \"../../../maths/Matrix\";\r\nexport class SaveTranslate {\r\n    constructor() {\r\n        this._mat = new Matrix();\r\n    }\r\n    isSaveMark() { return false; }\r\n    restore(context) {\r\n        this._mat.copyTo(context._curMat);\r\n        SaveTranslate.POOL[SaveTranslate.POOL._length++] = this;\r\n    }\r\n    static save(context) {\r\n        var no = SaveTranslate.POOL;\r\n        var o = no._length > 0 ? no[--no._length] : (new SaveTranslate());\r\n        context._curMat.copyTo(o._mat);\r\n        var _save = context._save;\r\n        _save[_save._length++] = o;\r\n    }\r\n}\r\nSaveTranslate.POOL = SaveBase._createArray();\r\n//# sourceMappingURL=SaveTranslate.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/webgl/canvas/save/ISaveData.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/webgl/canvas/save/SaveBase.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/maths/Matrix.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/resource/Context.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"SaveTranslate.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../../libs/laya/webgl/canvas/save/SaveTranslate.ts\"],\"names\":[],\"mappings\":\"AACA,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AACtC,OAAO,EAAE,MAAM,EAAE,MAAM,uBAAuB,CAAA;AAG9C,MAAM,OAAO,aAAa;IAA1B;QAKI,SAAI,GAAW,IAAI,MAAM,EAAE,CAAC;IAgBhC,CAAC;IAfG,UAAU,KAAc,OAAO,KAAK,CAAC,CAAC,CAAC;IAEvC,OAAO,CAAC,OAAgB;QACpB,IAAI,CAAC,IAAI,CAAC,MAAM,CAAC,OAAO,CAAC,OAAO,CAAC,CAAC;QAClC,aAAa,CAAC,IAAI,CAAC,aAAa,CAAC,IAAI,CAAC,OAAO,EAAE,CAAC,GAAG,IAAI,CAAC;IAC5D,CAAC;IAED,MAAM,CAAC,IAAI,CAAC,OAAgB;QACxB,IAAI,EAAE,GAAQ,aAAa,CAAC,IAAI,CAAC;QACjC,IAAI,CAAC,GAAkB,EAAE,CAAC,OAAO,GAAG,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,EAAE,CAAC,OAAO,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,aAAa,EAAE,CAAC,CAAC;QACjF,OAAO,CAAC,OAAO,CAAC,MAAM,CAAC,CAAC,CAAC,IAAI,CAAC,CAAC;QAC/B,IAAI,KAAK,GAAQ,OAAO,CAAC,KAAK,CAAC;QAC/B,KAAK,CAAC,KAAK,CAAC,OAAO,EAAE,CAAC,GAAG,CAAC,CAAC;IAC/B,CAAC;;AAhBc,kBAAI,GAAQ,QAAQ,CAAC,YAAY,EAAE,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/webgl/canvas/save/SaveTranslate.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { ISaveData } from \"./ISaveData\";\r\nimport { Matrix } from \"../../../maths/Matrix\";\r\nimport { Context } from \"../../../resource/Context\";\r\nexport declare class SaveTranslate implements ISaveData {\r\n    private static POOL;\r\n    _mat: Matrix;\r\n    isSaveMark(): boolean;\r\n    restore(context: Context): void;\r\n    static save(context: Context): void;\r\n}\r\n"
+  }
+}

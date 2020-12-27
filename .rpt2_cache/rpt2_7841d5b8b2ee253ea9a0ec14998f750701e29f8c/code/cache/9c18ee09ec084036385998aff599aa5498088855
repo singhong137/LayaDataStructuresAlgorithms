@@ -1,0 +1,10 @@
+{
+  "code": "export var WarpMode;\r\n(function (WarpMode) {\r\n    WarpMode[WarpMode[\"Repeat\"] = 0] = \"Repeat\";\r\n    WarpMode[WarpMode[\"Clamp\"] = 1] = \"Clamp\";\r\n})(WarpMode || (WarpMode = {}));\r\n//# sourceMappingURL=WrapMode.js.map",
+  "references": [],
+  "map": "{\"version\":3,\"file\":\"WrapMode.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../libs/laya/resource/WrapMode.ts\"],\"names\":[],\"mappings\":\"AAGA,MAAM,CAAN,IAAY,QAKX;AALD,WAAY,QAAQ;IAEhB,2CAAU,CAAA;IAEV,yCAAS,CAAA;AACb,CAAC,EALW,QAAQ,KAAR,QAAQ,QAKnB\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/resource/WrapMode.d.ts",
+    "writeByteOrderMark": false,
+    "text": "export declare enum WarpMode {\r\n    Repeat = 0,\r\n    Clamp = 1\r\n}\r\n"
+  }
+}

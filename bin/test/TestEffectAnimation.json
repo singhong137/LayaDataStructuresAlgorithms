@@ -1,0 +1,1 @@
+{"type":"Scene","props":{"width":640,"height":1136},"compId":2,"child":[{"type":"Button","props":{"y":568,"x":320,"width":300,"skin":"comp/button.png","label":"label","height":200,"anchorY":0.5,"anchorX":0.5},"compId":3,"child":[{"type":"Script","props":{"y":0,"x":0,"playEvent":"mousedown","runtime":"ui.test.test1UI"},"compId":4}]}],"loadList":["comp/button.png"],"loadList3D":[]}

@@ -1,0 +1,12 @@
+{
+  "code": "import { WebGL } from \"../webgl/WebGL\";\r\nexport class RunDriver {\r\n}\r\nRunDriver.createShaderCondition = function (conditionScript) {\r\n    var fn = \"(function() {return \" + conditionScript + \";})\";\r\n    return window.Laya._runScript(fn);\r\n};\r\nRunDriver.changeWebGLSize = function (w, h) {\r\n    WebGL.onStageResize(w, h);\r\n};\r\n//# sourceMappingURL=RunDriver.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/webgl/WebGL.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"RunDriver.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../libs/laya/utils/RunDriver.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,KAAK,EAAE,MAAM,gBAAgB,CAAA;AAMtC,MAAM,OAAO,SAAS;;AAEX,+BAAqB,GAAa,UAAU,eAAuB;IACtE,IAAI,EAAE,GAAW,sBAAsB,GAAG,eAAe,GAAG,KAAK,CAAC;IAClE,OAAQ,MAAc,CAAC,IAAI,CAAC,UAAU,CAAC,EAAE,CAAC,CAAC;AAC/C,CAAC,CAAA;AAMM,yBAAe,GAAa,UAAU,CAAS,EAAE,CAAS;IAC7D,KAAK,CAAC,aAAa,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAA\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/utils/RunDriver.d.ts",
+    "writeByteOrderMark": false,
+    "text": "export declare class RunDriver {\r\n    static createShaderCondition: Function;\r\n    static changeWebGLSize: Function;\r\n}\r\n"
+  }
+}

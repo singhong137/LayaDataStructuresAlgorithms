@@ -1,0 +1,9 @@
+{
+  "code": "import { Script } from \"laya/components/Script\";\r\nimport { Scene } from \"laya/display/Scene\";\r\nexport default class Start extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n    }\r\n    onClick() {\r\n        Scene.open('test/box2d.scene');\r\n    }\r\n}\r\n//# sourceMappingURL=Start.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/Laya.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/display/Scene.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"Start.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/Start.ts\"],\"names\":[],\"mappings\":\"AACA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAChD,OAAO,EAAE,KAAK,EAAE,MAAM,oBAAoB,CAAC;AAE3C,MAAM,CAAC,OAAO,OAAO,KAAM,SAAQ,MAAM;IACrC;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAED,QAAQ;IAER,CAAC;IAED,OAAO;QACH,KAAK,CAAC,IAAI,CAAC,kBAAkB,CAAC,CAAC;IACnC,CAAC;CACJ\"}"
+}

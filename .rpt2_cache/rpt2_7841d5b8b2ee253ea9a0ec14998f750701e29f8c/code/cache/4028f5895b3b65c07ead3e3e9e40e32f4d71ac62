@@ -1,0 +1,13 @@
+{
+  "code": "export class IPhysics {\r\n}\r\nIPhysics.RigidBody = null;\r\nIPhysics.Physics = null;\r\n//# sourceMappingURL=IPhysics.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/physics/RigidBody.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/physics/Physics.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"IPhysics.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../libs/laya/physics/IPhysics.ts\"],\"names\":[],\"mappings\":\"AAMA,MAAM,OAAO,QAAQ;;AACV,kBAAS,GAAqB,IAAI,CAAC;AACnC,gBAAO,GAAmB,IAAI,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/physics/IPhysics.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { RigidBody } from \"./RigidBody\";\r\nimport { Physics } from \"./Physics\";\r\nexport declare class IPhysics {\r\n    static RigidBody: typeof RigidBody;\r\n    static Physics: typeof Physics;\r\n}\r\n"
+  }
+}

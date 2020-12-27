@@ -1,0 +1,14 @@
+{
+  "code": "import { Handler } from \"../utils/Handler\";\r\nimport { ILaya } from \"./../../ILaya\";\r\nimport { Loader } from \"./Loader\";\r\nexport class AtlasInfoManager {\r\n    static enable(infoFile, callback = null) {\r\n        ILaya.loader.load(infoFile, Handler.create(null, AtlasInfoManager._onInfoLoaded, [callback]), null, Loader.JSON);\r\n    }\r\n    static _onInfoLoaded(callback, data) {\r\n        var tKey;\r\n        var tPrefix;\r\n        var tArr;\r\n        var i, len;\r\n        for (tKey in data) {\r\n            tArr = data[tKey];\r\n            tPrefix = tArr[0];\r\n            tArr = tArr[1];\r\n            len = tArr.length;\r\n            for (i = 0; i < len; i++) {\r\n                AtlasInfoManager._fileLoadDic[tPrefix + tArr[i]] = tKey;\r\n            }\r\n        }\r\n        callback && callback.run();\r\n    }\r\n    static getFileLoadPath(file) {\r\n        return AtlasInfoManager._fileLoadDic[file] || file;\r\n    }\r\n}\r\nAtlasInfoManager._fileLoadDic = {};\r\n//# sourceMappingURL=AtlasInfoManager.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/Handler.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/ILaya.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/net/Loader.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"AtlasInfoManager.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../libs/laya/net/AtlasInfoManager.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,kBAAkB,CAAC;AAC3C,OAAO,EAAE,KAAK,EAAE,MAAM,eAAe,CAAC;AACtC,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAKlC,MAAM,OAAO,gBAAgB;IAI5B,MAAM,CAAC,MAAM,CAAC,QAAgB,EAAE,WAAyB,IAAI;QAC5D,KAAK,CAAC,MAAM,CAAC,IAAI,CAAC,QAAQ,EAAE,OAAO,CAAC,MAAM,CAAC,IAAI,EAAE,gBAAgB,CAAC,aAAa,EAAE,CAAC,QAAQ,CAAC,CAAC,EAAE,IAAI,EAAE,MAAM,CAAC,IAAI,CAAC,CAAC;IAClH,CAAC;IAGO,MAAM,CAAC,aAAa,CAAC,QAAiB,EAAE,IAAS;QACxD,IAAI,IAAY,CAAC;QACjB,IAAI,OAAe,CAAC;QACpB,IAAI,IAAW,CAAC;QAChB,IAAI,CAAS,EAAE,GAAW,CAAC;QAE3B,KAAK,IAAI,IAAI,IAAI,EAAE;YAClB,IAAI,GAAG,IAAI,CAAC,IAAI,CAAC,CAAC;YAClB,OAAO,GAAG,IAAI,CAAC,CAAC,CAAC,CAAC;YAClB,IAAI,GAAG,IAAI,CAAC,CAAC,CAAC,CAAC;YACf,GAAG,GAAG,IAAI,CAAC,MAAM,CAAC;YAClB,KAAK,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,GAAG,EAAE,CAAC,EAAE,EAAE;gBACzB,gBAAgB,CAAC,YAAY,CAAC,OAAO,GAAG,IAAI,CAAC,CAAC,CAAC,CAAC,GAAG,IAAI,CAAC;aACxD;SACD;QACD,QAAQ,IAAI,QAAQ,CAAC,GAAG,EAAE,CAAC;IAC5B,CAAC;IAED,MAAM,CAAC,eAAe,CAAC,IAAY;QAClC,OAAO,gBAAgB,CAAC,YAAY,CAAC,IAAI,CAAC,IAAI,IAAI,CAAC;IACpD,CAAC;;AA3Bc,6BAAY,GAAQ,EAAE,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/net/AtlasInfoManager.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { Handler } from \"../utils/Handler\";\r\nexport declare class AtlasInfoManager {\r\n    private static _fileLoadDic;\r\n    static enable(infoFile: string, callback?: Handler | null): void;\r\n    private static _onInfoLoaded;\r\n    static getFileLoadPath(file: string): string;\r\n}\r\n"
+  }
+}

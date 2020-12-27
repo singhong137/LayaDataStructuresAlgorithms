@@ -1,0 +1,14 @@
+{
+  "code": "import { Slider } from \"./Slider\";\r\nimport { ILaya } from \"../../ILaya\";\r\nimport { ClassUtils } from \"../utils/ClassUtils\";\r\nexport class HSlider extends Slider {\r\n    constructor(skin = null) {\r\n        super(skin);\r\n        this.isVertical = false;\r\n    }\r\n}\r\nILaya.regClass(HSlider);\r\nClassUtils.regClass(\"laya.ui.HSlider\", HSlider);\r\nClassUtils.regClass(\"Laya.HSlider\", HSlider);\r\n//# sourceMappingURL=HSlider.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/ui/Slider.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/ILaya.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/ClassUtils.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"HSlider.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../libs/laya/ui/HSlider.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,UAAU,CAAC;AAClC,OAAO,EAAE,KAAK,EAAE,MAAM,aAAa,CAAC;AACpC,OAAO,EAAE,UAAU,EAAE,MAAM,qBAAqB,CAAC;AA0FjD,MAAM,OAAO,OAAQ,SAAQ,MAAM;IAM/B,YAAY,OAAe,IAAI;QAC3B,KAAK,CAAC,IAAI,CAAC,CAAC;QACZ,IAAI,CAAC,UAAU,GAAG,KAAK,CAAC;IAC5B,CAAC;CACJ;AAED,KAAK,CAAC,QAAQ,CAAC,OAAO,CAAC,CAAC;AACxB,UAAU,CAAC,QAAQ,CAAC,iBAAiB,EAAE,OAAO,CAAC,CAAC;AAChD,UAAU,CAAC,QAAQ,CAAC,cAAc,EAAE,OAAO,CAAC,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/ui/HSlider.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { Slider } from \"./Slider\";\r\nexport declare class HSlider extends Slider {\r\n    constructor(skin?: string);\r\n}\r\n"
+  }
+}

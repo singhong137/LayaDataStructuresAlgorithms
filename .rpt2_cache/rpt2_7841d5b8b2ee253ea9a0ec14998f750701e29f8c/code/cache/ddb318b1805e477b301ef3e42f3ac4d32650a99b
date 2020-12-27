@@ -1,0 +1,10 @@
+{
+  "code": "export class UIConfig {\r\n}\r\nUIConfig.touchScrollEnable = true;\r\nUIConfig.mouseWheelEnable = true;\r\nUIConfig.showButtons = true;\r\nUIConfig.popupBgColor = \"#000000\";\r\nUIConfig.popupBgAlpha = 0.5;\r\nUIConfig.closeDialogOnSide = true;\r\nwindow.UIConfig = UIConfig;\r\n//# sourceMappingURL=UIConfig.js.map",
+  "references": [],
+  "map": "{\"version\":3,\"file\":\"UIConfig.js\",\"sourceRoot\":\"\",\"sources\":[\"../../libs/UIConfig.ts\"],\"names\":[],\"mappings\":\"AACC,MAAM,OAAO,QAAQ;;AAEZ,0BAAiB,GAAW,IAAI,CAAC;AAEjC,yBAAgB,GAAW,IAAI,CAAC;AAEhC,oBAAW,GAAW,IAAI,CAAC;AAE3B,qBAAY,GAAU,SAAS,CAAC;AAEhC,qBAAY,GAAU,GAAG,CAAC;AAE1B,0BAAiB,GAAW,IAAI,CAAC;AAEzC,MAAc,CAAC,QAAQ,GAAG,QAAQ,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/UIConfig.d.ts",
+    "writeByteOrderMark": false,
+    "text": "export declare class UIConfig {\r\n    static touchScrollEnable: boolean;\r\n    static mouseWheelEnable: boolean;\r\n    static showButtons: boolean;\r\n    static popupBgColor: string;\r\n    static popupBgAlpha: number;\r\n    static closeDialogOnSide: boolean;\r\n}\r\n"
+  }
+}

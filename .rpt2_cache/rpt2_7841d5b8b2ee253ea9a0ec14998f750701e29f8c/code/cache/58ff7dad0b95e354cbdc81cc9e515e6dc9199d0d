@@ -1,0 +1,16 @@
+{
+  "code": "import { UIGroup } from \"./UIGroup\";\r\nimport { Radio } from \"./Radio\";\r\nimport { ILaya } from \"../../ILaya\";\r\nimport { ClassUtils } from \"../utils/ClassUtils\";\r\nexport class RadioGroup extends UIGroup {\r\n    createItem(skin, label) {\r\n        return new Radio(skin, label);\r\n    }\r\n}\r\nILaya.regClass(RadioGroup);\r\nClassUtils.regClass(\"laya.ui.RadioGroup\", RadioGroup);\r\nClassUtils.regClass(\"Laya.RadioGroup\", RadioGroup);\r\n//# sourceMappingURL=RadioGroup.js.map",
+  "references": [
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/ui/UIGroup.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/display/Sprite.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/ui/Radio.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/ILaya.ts",
+    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/utils/ClassUtils.ts"
+  ],
+  "map": "{\"version\":3,\"file\":\"RadioGroup.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../libs/laya/ui/RadioGroup.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,WAAW,CAAC;AAEpC,OAAO,EAAE,KAAK,EAAE,MAAM,SAAS,CAAA;AAC/B,OAAO,EAAE,KAAK,EAAE,MAAM,aAAa,CAAC;AACpC,OAAO,EAAE,UAAU,EAAE,MAAM,qBAAqB,CAAC;AAkFjD,MAAM,OAAO,UAAW,SAAQ,OAAO;IAIzB,UAAU,CAAC,IAAY,EAAE,KAAa;QAC5C,OAAO,IAAI,KAAK,CAAC,IAAI,EAAE,KAAK,CAAC,CAAC;IAClC,CAAC;CACJ;AAED,KAAK,CAAC,QAAQ,CAAC,UAAU,CAAC,CAAC;AAC3B,UAAU,CAAC,QAAQ,CAAC,oBAAoB,EAAE,UAAU,CAAC,CAAC;AACtD,UAAU,CAAC,QAAQ,CAAC,iBAAiB,EAAE,UAAU,CAAC,CAAC\"}",
+  "dts": {
+    "name": "D:/widgets/LayaDataStructuresAlgorithms/.rpt2_cache/placeholder/laya/ui/RadioGroup.d.ts",
+    "writeByteOrderMark": false,
+    "text": "import { UIGroup } from \"./UIGroup\";\r\nimport { Sprite } from \"../display/Sprite\";\r\nexport declare class RadioGroup extends UIGroup {\r\n    protected createItem(skin: string, label: string): Sprite;\r\n}\r\n"
+  }
+}
