@@ -1,6 +1,4 @@
-import { Laya } from "Laya";
 import { Script } from "laya/components/Script";
-import { Scene } from "laya/display/Scene";
 import { BFS, breadthFirstSearch } from "../algorithms/graph/breadth-first-search";
 import { depthFirstSearch, DFS } from "../algorithms/graph/depth-first-search";
 import { dijkstra, dijkstraWithPath } from "../algorithms/graph/dijkstra";
@@ -9,7 +7,6 @@ import { kruskal } from "../algorithms/graph/kruskal";
 import { prim } from "../algorithms/graph/prim";
 import Graph from "../data_structures/Graph";
 import { Stack } from "../data_structures/Stack";
-import GameConfig from "../GameConfig";
 
 export default class GraphTest extends Script {
     constructor() {
@@ -253,59 +250,13 @@ export default class GraphTest extends Script {
 
         console.log(uf.connected(1, 4));
         console.log(uf.connected(1, 3));
-
-        // console.time
-
-        let tb = [];
-        tb[77.8] = 0.134739;
-        let ssin = (n: number) => {
-            return tb[n];
-        }
-        console.time('a1')
-        let aa = 1;
-        for (let i: number = 0; i < 10000; i++) {
-            aa = Math.sin(77.8);
-        }
-        console.timeEnd('a1');
-
-        console.time('a2')
-        let bb = 1;
-        for (let j: number = 0; j < 10000; j++) {
-            bb = ssin(77.8);
-        }
-        console.timeEnd('a2');
-
-        console.time('a3')
-        let cc = 1;
-        for (let j: number = 0; j < 10000; j++) {
-            cc = tb[77.8];
-        }
-        console.timeEnd('a3');
-
-        let tb1 = []; tb1[77.8] = 0.134739;
-        console.time('a4')
-        let dd = 1;
-        for (let j: number = 0; j < 10000; j++) {
-            dd = tb1[77.8];
-        }
-        console.timeEnd('a4');
-
-        let ff = (a: number, b: Function): number => {
-            return b(a);
-        }
-        console.time('a5')
-        let ee = 1;
-        for (let j: number = 0; j < 10000; j++) {
-            ee = ff(77.8, ssin);
-        }
-        console.timeEnd('a5');
     }
 }
 
 class UnionFind {
-    private count;
-    private parent: string[];
-    constructor(elements) {
+    private count: number;
+    private parent: (string | number)[];
+    constructor(elements: (number | string)[]) {
         // Number of disconnected components
         this.count = elements.length;
 
@@ -317,7 +268,7 @@ class UnionFind {
         elements.forEach(e => (this.parent[e] = e));
     }
 
-    union(a, b) {
+    union(a: string | number, b: string | number) {
         let rootA = this.find(a);
         let rootB = this.find(b);
 
@@ -335,7 +286,7 @@ class UnionFind {
     }
 
     // Returns final parent of a node
-    find(a) {
+    find(a: string | number) {
         while (this.parent[a] !== a) {
             a = this.parent[a];
         }
@@ -343,7 +294,7 @@ class UnionFind {
     }
 
     // Checks connectivity of the 2 nodes
-    connected(a, b) {
+    connected(a: string | number, b: string | number) {
         return this.find(a) === this.find(b);
     }
 }

@@ -39,12 +39,12 @@ export class StackArray<T> {
 }
 
 export class Stack<T> {
-    private items: object;
+    private items: T[];
     private count: number;
 
     constructor() {
         this.count = 0;
-        this.items = {};
+        this.items = [];
     }
 
     public push(element: T) {
@@ -74,7 +74,7 @@ export class Stack<T> {
     }
 
     public clear() {
-        this.items = {};
+        this.items = [];
         this.count = 0;
     }
 

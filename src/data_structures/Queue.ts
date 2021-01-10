@@ -3,12 +3,12 @@ import { ICompareFunction, defaultCompare, Compare } from "../util";
 export class Queue<T> {
     protected count: number;
     protected lowestCount: number;
-    protected items: object;
+    protected items: T[];
 
     constructor() {
         this.count = 0;
         this.lowestCount = 0;
-        this.items = {};
+        this.items = [];
     }
 
     public enqueue(element: T) {
@@ -38,7 +38,7 @@ export class Queue<T> {
     }
 
     public clear() {
-        this.items = {};
+        this.items = [];
         this.count = 0;
         this.lowestCount = 0;
     }

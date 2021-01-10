@@ -26,7 +26,7 @@ export default class StackTest extends Script {
         stack1.push(8);
         stack1.clear();
 
-        let decimal2Binary = (decNum: number) => {
+        const decimal2Binary = (decNum: number) => {
             const remStack = new Stack();
             let number = decNum;
             let rem: number;
@@ -43,12 +43,12 @@ export default class StackTest extends Script {
         }
 
         console.log('decimal2Binary:');
-        console.log(decimal2Binary(233));
-        console.log(decimal2Binary(10));
-        console.log(decimal2Binary(1000));
-        console.log(decimal2Binary(13));
+        console.log('233 to ', decimal2Binary(233));
+        console.log('10 to ', decimal2Binary(10));
+        console.log('1000 to ', decimal2Binary(1000));
+        console.log('13 to ', decimal2Binary(13));
 
-        let baseConverter = (decNumber: number, base: number) => {
+        const baseConverter = (decNumber: number, base: number) => {
             const remStack = new Stack<number>();
             const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
             let number = decNumber;
@@ -65,9 +65,9 @@ export default class StackTest extends Script {
         }
 
         console.log('baseConverter:');
-        console.log(baseConverter(100345, 2));
-        console.log(baseConverter(100345, 8));
-        console.log(baseConverter(100345, 16));
-        console.log(baseConverter(100345, 35));
+        console.log('100345 to binary', baseConverter(100345, 2));
+        console.log('100345 to octal', baseConverter(100345, 8));
+        console.log('100345 to hexadecimal', baseConverter(100345, 16));
+        console.log('100345 to 35 base', baseConverter(100345, 35));
     }
 }

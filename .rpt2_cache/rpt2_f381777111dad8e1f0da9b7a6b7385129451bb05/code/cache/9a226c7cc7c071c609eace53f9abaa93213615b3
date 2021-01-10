@@ -1,4 +1,0 @@
-{
-  "code": "export class ValuePair {\r\n    constructor(key, value) {\r\n        this.key = key;\r\n        this.value = value;\r\n    }\r\n    toString() {\r\n        return `[#${this.key}:${this.value}]`;\r\n    }\r\n}\r\n",
-  "references": []
-}

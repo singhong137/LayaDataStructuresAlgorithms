@@ -1,7 +1,0 @@
-{
-  "code": "import { Compare, defaultCompare, swap } from \"../../util\";\r\nexport function selectionSort(array, compareFn = defaultCompare) {\r\n    const length = array.length;\r\n    let indexMin;\r\n    for (let i = 0; i < length - 1; i++) {\r\n        indexMin = i;\r\n        for (let j = i; j < length; j++) {\r\n            if (compareFn(array[indexMin], array[j]) === Compare.BIGGER_THAN)\r\n                indexMin = j;\r\n        }\r\n        if (i !== indexMin)\r\n            swap(array, i, indexMin);\r\n    }\r\n    return array;\r\n}\r\n//# sourceMappingURL=selection-sort.js.map",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/src/util.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"selection-sort.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../src/algorithms/sorting/selection-sort.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,OAAO,EAAE,cAAc,EAAE,IAAI,EAAE,MAAM,YAAY,CAAC;AAE3D,MAAM,UAAU,aAAa,CAAI,KAAU,EAAE,SAAS,GAAG,cAAc;IACnE,MAAM,MAAM,GAAG,KAAK,CAAC,MAAM,CAAC;IAC5B,IAAI,QAAQ,CAAC;IAEb,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,MAAM,GAAG,CAAC,EAAE,CAAC,EAAE,EAAE;QACjC,QAAQ,GAAG,CAAC,CAAC;QACb,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,MAAM,EAAE,CAAC,EAAE,EAAE;YAC7B,IAAI,SAAS,CAAC,KAAK,CAAC,QAAQ,CAAC,EAAE,KAAK,CAAC,CAAC,CAAC,CAAC,KAAK,OAAO,CAAC,WAAW;gBAAE,QAAQ,GAAG,CAAC,CAAC;SAClF;QACD,IAAI,CAAC,KAAK,QAAQ;YAAE,IAAI,CAAC,KAAK,EAAE,CAAC,EAAE,QAAQ,CAAC,CAAC;KAChD;IAED,OAAO,KAAK,CAAC;AACjB,CAAC\"}"
-}

@@ -6,7 +6,6 @@ export class HashTable<K, V>{
     protected table: { [key: string]: ValuePair<K, V> };
 
     constructor(protected toStrFn: (key: K) => string = default2String) {
-        // this.table = this.tableType;
         this.table = {};
     }
 
@@ -39,8 +38,8 @@ export class HashTable<K, V>{
     }
 
     public get(key: K): V | undefined {
-        const valuePai = this.table[this.hashCode(key)];
-        return valuePai == null ? undefined : valuePai.value;
+        const valuePair = this.table[this.hashCode(key)];
+        return valuePair == null ? undefined : valuePair.value;
     }
 
     public remove(key: K): boolean {

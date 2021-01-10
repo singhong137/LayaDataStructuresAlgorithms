@@ -9,7 +9,6 @@ import { quickSort } from "../algorithms/sorting/quick-sort";
 import { radixSort } from "../algorithms/sorting/radix-sort";
 import { selectionSort } from "../algorithms/sorting/selection-sort";
 import { shellSort } from "../algorithms/sorting/shell-sort";
-import { swap } from "../util";
 
 export default class SortingTest extends Script {
     constructor() {

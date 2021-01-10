@@ -1,4 +1,0 @@
-{
-  "code": "export const DOES_NOT_EXIST = -1;\r\nexport var Compare;\r\n(function (Compare) {\r\n    Compare[Compare[\"LESS_THAN\"] = -1] = \"LESS_THAN\";\r\n    Compare[Compare[\"BIGGER_THAN\"] = 1] = \"BIGGER_THAN\";\r\n    Compare[Compare[\"EQUALS\"] = 0] = \"EQUALS\";\r\n})(Compare || (Compare = {}));\r\nexport function defaultEquals(a, b) {\r\n    return a === b;\r\n}\r\nexport function defaultCompare(a, b) {\r\n    if (a === b)\r\n        return Compare.EQUALS;\r\n    return a < b ? Compare.LESS_THAN : Compare.BIGGER_THAN;\r\n}\r\nexport function default2String(item) {\r\n    if (item === null) {\r\n        return 'NULL';\r\n    }\r\n    else if (item === undefined) {\r\n        return 'UNDEFINED';\r\n    }\r\n    else if (typeof item === 'string' || item instanceof String) {\r\n        return `${item}`;\r\n    }\r\n    item.toString();\r\n}\r\n",
-  "references": []
-}

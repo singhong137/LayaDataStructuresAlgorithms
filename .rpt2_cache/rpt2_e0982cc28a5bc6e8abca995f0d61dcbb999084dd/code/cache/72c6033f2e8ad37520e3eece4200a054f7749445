@@ -1,7 +1,0 @@
-{
-  "code": "import { Compare, defaultCompare } from \"../../util\";\r\nexport function insertionSort(array, compareFn = defaultCompare) {\r\n    const length = array.length;\r\n    let temp;\r\n    for (let i = 1; i < length; i++) {\r\n        let j = i;\r\n        temp = array[i];\r\n        while (j > 0 && compareFn(array[j - 1], temp) === Compare.BIGGER_THAN) {\r\n            array[j] = array[j - 1];\r\n            j--;\r\n        }\r\n        array[j] = temp;\r\n    }\r\n    return array;\r\n}\r\n//# sourceMappingURL=insertion-sort.js.map",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/src/util.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"insertion-sort.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../src/algorithms/sorting/insertion-sort.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,OAAO,EAAE,cAAc,EAAE,MAAM,YAAY,CAAC;AAErD,MAAM,UAAU,aAAa,CAAI,KAAU,EAAE,SAAS,GAAG,cAAc;IACnE,MAAM,MAAM,GAAG,KAAK,CAAC,MAAM,CAAC;IAC5B,IAAI,IAAO,CAAC;IACZ,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,MAAM,EAAE,CAAC,EAAE,EAAE;QAC7B,IAAI,CAAC,GAAG,CAAC,CAAC;QACV,IAAI,GAAG,KAAK,CAAC,CAAC,CAAC,CAAC;QAChB,OAAO,CAAC,GAAG,CAAC,IAAI,SAAS,CAAC,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,EAAE,IAAI,CAAC,KAAK,OAAO,CAAC,WAAW,EAAE;YACnE,KAAK,CAAC,CAAC,CAAC,GAAG,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC;YACxB,CAAC,EAAE,CAAC;SACP;QACD,KAAK,CAAC,CAAC,CAAC,GAAG,IAAI,CAAC;KACnB;IACD,OAAO,KAAK,CAAC;AACjB,CAAC\"}"
-}

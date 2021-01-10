@@ -1,6 +1,0 @@
-{
-  "code": "import { Script } from \"laya/components/Script\";\r\nexport default class LinkedListTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        console.log('AAA');\r\n    }\r\n}\r\n",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts"
-  ]
-}

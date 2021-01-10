@@ -1,4 +1,0 @@
-{
-  "code": "export class Node {\r\n    constructor(element, next) {\r\n        this.element = element;\r\n        this.next = next;\r\n    }\r\n}\r\nexport class DoublyNode extends Node {\r\n    constructor(element, next, prev) {\r\n        super(element, next);\r\n        this.element = element;\r\n        this.next = next;\r\n        this.prev = prev;\r\n    }\r\n}\r\n",
-  "references": []
-}

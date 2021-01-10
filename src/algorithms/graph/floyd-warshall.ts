@@ -64,5 +64,3 @@ export function floydWarshallWithPath(graph: number[][]): number[][] {
 
     return paths;
 }
-
-

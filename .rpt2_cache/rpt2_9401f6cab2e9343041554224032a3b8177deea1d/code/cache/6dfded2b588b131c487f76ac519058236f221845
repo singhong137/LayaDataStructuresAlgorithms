@@ -1,7 +1,0 @@
-{
-  "code": "import { Script } from \"laya/components/Script\";\r\nconst lele = 3.14;\r\nexport default class UnitConsole extends Script {\r\n    constructor() {\r\n        super();\r\n        const lalala = 9;\r\n    }\r\n    onEnable() {\r\n        console.time('a1');\r\n        let aa = 1;\r\n        for (let i = 0; i < 1000; i++) {\r\n            aa *= 2;\r\n        }\r\n        console.timeEnd('a1');\r\n        console.time('a2');\r\n        let bb = 1;\r\n        for (let j = 0; j < 1000; j++) {\r\n            bb << 1;\r\n        }\r\n        console.timeEnd('a2');\r\n        console.log(lele);\r\n        let [a, b] = [1, 2];\r\n        console.log(a, ' / ', b);\r\n        [a, b] = [b, a];\r\n        console.log(a, ' / ', b);\r\n        let c = Math.pow(a, 3);\r\n        console.log(`c:${c}`);\r\n        const fibonacci = [];\r\n        fibonacci[0] = 1;\r\n        fibonacci[1] = 1;\r\n        for (let i = 2; i < 20; i++) {\r\n            fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];\r\n        }\r\n        console.log(fibonacci);\r\n    }\r\n}\r\n",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
-    "D:/widgets/LayaDataStructuresAlgorithms/libs/Laya.ts"
-  ]
-}

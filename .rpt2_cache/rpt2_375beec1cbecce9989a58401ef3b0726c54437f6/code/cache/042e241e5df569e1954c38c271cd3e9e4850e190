@@ -1,7 +1,0 @@
-{
-  "code": "import { Compare, defaultCompare, swap } from \"../../util\";\r\nexport function BubbleSort(array, compareFn = defaultCompare) {\r\n    const length = array.length;\r\n    for (let i = 0; i < length; i++) {\r\n        for (let j = 0; j < length - 1 - i; j++) {\r\n            if (compareFn(array[j], array[j + 1]) === Compare.BIGGER_THAN)\r\n                swap(array, j, j + 1);\r\n        }\r\n    }\r\n    return array;\r\n}\r\n//# sourceMappingURL=bubble-sort.js.map",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/src/util.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"bubble-sort.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../src/algorithms/sorting/bubble-sort.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,OAAO,EAAE,cAAc,EAAE,IAAI,EAAE,MAAM,YAAY,CAAC;AAE3D,MAAM,UAAU,UAAU,CAAI,KAAU,EAAE,SAAS,GAAG,cAAc;IAChE,MAAM,MAAM,GAAG,KAAK,CAAC,MAAM,CAAC;IAC5B,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,MAAM,EAAE,CAAC,EAAE,EAAE;QAC7B,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,MAAM,GAAG,CAAC,GAAG,CAAC,EAAE,CAAC,EAAE,EAAE;YACrC,IAAI,SAAS,CAAC,KAAK,CAAC,CAAC,CAAC,EAAE,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,KAAK,OAAO,CAAC,WAAW;gBAAE,IAAI,CAAC,KAAK,EAAE,CAAC,EAAE,CAAC,GAAG,CAAC,CAAC,CAAC;SACxF;KACJ;IACD,OAAO,KAAK,CAAC;AACjB,CAAC\"}"
-}

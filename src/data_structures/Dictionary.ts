@@ -2,7 +2,7 @@ import { ValuePair } from "./data_models/Value-pair";
 import { default2String } from "../util";
 
 export default class Dictionary<K, V>{
-    private table: { [key: string]: ValuePair<K, V> }
+    private table: { [key: string]: ValuePair<K, V> };
 
     constructor(private toStrFn: (key: K | string) => string = default2String) {
         this.table = {};
@@ -17,7 +17,7 @@ export default class Dictionary<K, V>{
         return false;
     }
 
-    public get(key: K): V {
+    public get(key: K): V|undefined {
         const valuePair = this.table[this.toStrFn(key)];
         return valuePair == null ? undefined : valuePair.value;
     }

@@ -1,8 +1,0 @@
-{
-  "code": "import { Script } from \"laya/components/Script\";\r\nimport { minCoinChangeGreedy } from \"../algorithms/greedy/min-coin-changeGreedy\";\r\nexport default class GreedyTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        console.log('Greedy Test~~~');\r\n        console.log('minCoinChangeGreedy [1, 5, 10],15: ', minCoinChangeGreedy([1, 5, 10], 15));\r\n        console.log('minCoinChangeGreedy [1, 3, 4],6: ', minCoinChangeGreedy([1, 3, 4], 6));\r\n    }\r\n}\r\n//# sourceMappingURL=GreedyTest.js.map",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
-    "D:/widgets/LayaDataStructuresAlgorithms/src/algorithms/greedy/min-coin-changeGreedy.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"GreedyTest.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/GreedyTest.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAChD,OAAO,EAAE,mBAAmB,EAAE,MAAM,4CAA4C,CAAC;AAEjF,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,MAAM;IAC1C;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAED,QAAQ;QACJ,OAAO,CAAC,GAAG,CAAC,gBAAgB,CAAC,CAAC;QAE9B,OAAO,CAAC,GAAG,CAAC,qCAAqC,EAAE,mBAAmB,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,EAAE,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC;QACxF,OAAO,CAAC,GAAG,CAAC,mCAAmC,EAAE,mBAAmB,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;IACxF,CAAC;CACJ\"}"
-}

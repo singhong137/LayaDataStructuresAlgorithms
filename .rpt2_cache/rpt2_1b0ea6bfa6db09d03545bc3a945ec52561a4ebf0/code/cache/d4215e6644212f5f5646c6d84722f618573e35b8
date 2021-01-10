@@ -1,7 +1,0 @@
-{
-  "code": "import { defaultEquals, DOES_NOT_EXIST } from \"../../util\";\r\nexport function sequentialSearch(array, value, equalsFn = defaultEquals) {\r\n    for (let i = 0; i < array.length; i++)\r\n        if (equalsFn(value, array[i]))\r\n            return i;\r\n    return DOES_NOT_EXIST;\r\n}\r\n//# sourceMappingURL=sequential-search.js.map",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/src/util.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"sequential-search.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../src/algorithms/search/sequential-search.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,aAAa,EAAE,cAAc,EAAmB,MAAM,YAAY,CAAC;AAE5E,MAAM,UAAU,gBAAgB,CAAI,KAAU,EAAE,KAAQ,EAAE,WAA+B,aAAa;IAClG,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,KAAK,CAAC,MAAM,EAAE,CAAC,EAAE;QAAC,IAAI,QAAQ,CAAC,KAAK,EAAE,KAAK,CAAC,CAAC,CAAC,CAAC;YAAE,OAAO,CAAC,CAAC;IAC9E,OAAO,cAAc,CAAC;AAC1B,CAAC\"}"
-}

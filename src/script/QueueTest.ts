@@ -7,6 +7,7 @@ export default class QueueTest extends Script {
     }
 
     onEnable() {
+        console.log('queue~~');
         const queue = new Queue();
         console.log(queue.isEmpty());
 
@@ -22,7 +23,7 @@ export default class QueueTest extends Script {
         queue.dequeue();
         console.log(queue.toString());
 
-        console.log('--------')
+        console.log('deque~~')
         const deque = new Deque();
         console.log(deque.isEmpty());
         deque.addBack('John');
@@ -86,7 +87,7 @@ export default class QueueTest extends Script {
         console.log('was it a car or a cat i saw', palindromeChecker('was it a car or a cat i saw'));
         console.log('step on no pets', palindromeChecker('step on no pets'));
 
-        console.log('=================');
+        console.log('priorityQueue~~');
 
         const priorityQueue = new PriorityQueue<number>();
         priorityQueue.enqueue(4);

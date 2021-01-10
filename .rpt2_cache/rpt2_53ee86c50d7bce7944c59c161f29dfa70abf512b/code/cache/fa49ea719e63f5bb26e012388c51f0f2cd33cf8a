@@ -1,5 +1,0 @@
-{
-  "code": "export class ValuePair {\r\n    constructor(key, value) {\r\n        this.key = key;\r\n        this.value = value;\r\n    }\r\n    toString() {\r\n        return `[#${this.key}:${this.value}]`;\r\n    }\r\n}\r\nexport class ValuePairLazy extends ValuePair {\r\n    constructor(key, value, isDeleted = false) {\r\n        super(key, value);\r\n        this.key = key;\r\n        this.value = value;\r\n        this.isDeleted = isDeleted;\r\n    }\r\n}\r\n//# sourceMappingURL=Value-pair.js.map",
-  "references": [],
-  "map": "{\"version\":3,\"file\":\"Value-pair.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../src/data_structures/data_models/Value-pair.ts\"],\"names\":[],\"mappings\":\"AAAA,MAAM,OAAO,SAAS;IAClB,YAAmB,GAAM,EAAS,KAAQ;QAAvB,QAAG,GAAH,GAAG,CAAG;QAAS,UAAK,GAAL,KAAK,CAAG;IAE1C,CAAC;IAEM,QAAQ;QACX,OAAO,KAAK,IAAI,CAAC,GAAG,IAAI,IAAI,CAAC,KAAK,GAAG,CAAC;IAC1C,CAAC;CACJ;AAED,MAAM,OAAO,aAAoB,SAAQ,SAAe;IACpD,YAAmB,GAAM,EAAS,KAAQ,EAAS,YAAY,KAAK;QAChE,KAAK,CAAC,GAAG,EAAE,KAAK,CAAC,CAAC;QADH,QAAG,GAAH,GAAG,CAAG;QAAS,UAAK,GAAL,KAAK,CAAG;QAAS,cAAS,GAAT,SAAS,CAAQ;IAEpE,CAAC;CACJ\"}"
-}

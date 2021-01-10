@@ -1,4 +1,3 @@
-import { timer } from "Laya";
 import Dictionary from "../../data_structures/Dictionary";
 import Graph from "../../data_structures/Graph";
 import { Colors } from "../../util";

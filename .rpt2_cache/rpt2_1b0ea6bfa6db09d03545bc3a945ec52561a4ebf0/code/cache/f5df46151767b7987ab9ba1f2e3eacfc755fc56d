@@ -1,7 +1,0 @@
-{
-  "code": "import { swap } from \"../../util\";\r\nexport function shuffle(array) {\r\n    for (let i = array.length - 1; i > 0; i--) {\r\n        const randomIndex = Math.random() * (i + 1) | 0;\r\n        swap(array, i, randomIndex);\r\n    }\r\n    return array;\r\n}\r\n//# sourceMappingURL=fisher-yates.js.map",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/src/util.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"fisher-yates.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../../src/algorithms/shuffle/fisher-yates.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,IAAI,EAAE,MAAM,YAAY,CAAC;AAElC,MAAM,UAAU,OAAO,CAAI,KAAU;IACjC,KAAK,IAAI,CAAC,GAAG,KAAK,CAAC,MAAM,GAAG,CAAC,EAAE,CAAC,GAAG,CAAC,EAAE,CAAC,EAAE,EAAE;QACvC,MAAM,WAAW,GAAG,IAAI,CAAC,MAAM,EAAE,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC;QAChD,IAAI,CAAC,KAAK,EAAE,CAAC,EAAE,WAAW,CAAC,CAAC;KAC/B;IACD,OAAO,KAAK,CAAC;AACjB,CAAC\"}"
-}

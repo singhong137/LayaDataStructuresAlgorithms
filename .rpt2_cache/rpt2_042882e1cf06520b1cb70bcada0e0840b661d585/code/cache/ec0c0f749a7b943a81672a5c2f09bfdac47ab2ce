@@ -1,6 +1,0 @@
-{
-  "code": "import { swap, defaultCompare } from \"../util\";\r\nfunction heapify(array, index, heapSize, compareFn) {\r\n    let largest = index;\r\n    const left = 2 * index + 1;\r\n    const right = 2 * index + 2;\r\n    if (left < heapSize && compareFn(array[left], array[index]) > 0)\r\n        largest = left;\r\n    if (right < heapSize && compareFn(array[right], array[largest]) > 0)\r\n        largest = right;\r\n    if (largest !== index) {\r\n        swap(array, index, largest);\r\n        heapify(array, largest, heapSize, compareFn);\r\n    }\r\n}\r\nfunction buildMaxHeap(array, compareFn) {\r\n    for (let i = Math.floor(array.length / 2); i >= 0; --i)\r\n        heapify(array, i, array.length, compareFn);\r\n    return array;\r\n}\r\nexport default function heapSort(array, compareFn = defaultCompare) {\r\n    let heapSize = array.length;\r\n    buildMaxHeap(array, compareFn);\r\n    while (heapSize > 1) {\r\n        swap(array, 0, --heapSize);\r\n        heapify(array, 0, heapSize, compareFn);\r\n    }\r\n    return array;\r\n}\r\n",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/src/util.ts"
-  ]
-}

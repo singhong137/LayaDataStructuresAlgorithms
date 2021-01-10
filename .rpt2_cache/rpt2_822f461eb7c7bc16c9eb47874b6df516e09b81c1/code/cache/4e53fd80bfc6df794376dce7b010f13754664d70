@@ -1,8 +1,0 @@
-{
-  "code": "import { Script } from \"laya/components/Script\";\r\nimport { Scene } from \"laya/display/Scene\";\r\nexport default class Go2StartScene extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n    }\r\n    onClick() {\r\n        Scene.open('Start.scene');\r\n    }\r\n}\r\n",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/libs/Laya.ts",
-    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
-    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/display/Scene.ts"
-  ]
-}

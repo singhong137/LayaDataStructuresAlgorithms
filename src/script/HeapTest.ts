@@ -1,6 +1,5 @@
 import { Script } from "laya/components/Script";
 import { MinHeap, MaxHeap } from "../data_structures/Heap";
-import { defaultCompare, ICompareFunction } from "../util";
 import heapSort from "../algorithms/sorting/heap-sort";
 
 export default class HeapTest extends Script {

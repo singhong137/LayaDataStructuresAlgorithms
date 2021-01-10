@@ -71,8 +71,4 @@ export function BFS(graph: Graph, startVertex: string | number): shortestPathDat
         distances: distances,
         predecessors: predecessors
     }
-
 }
-
-
-

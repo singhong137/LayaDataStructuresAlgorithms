@@ -1,8 +1,0 @@
-{
-  "code": "import { Script } from \"laya/components/Script\";\r\nimport { BubbleSort } from \"../algorithms/sorting/bubble-sort\";\r\nexport default class SortingTest extends Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onEnable() {\r\n        let createNonSortedArray = () => {\r\n            let array = [];\r\n            for (let i = 5; i > 0; i--)\r\n                array.push(i);\r\n            return array;\r\n        };\r\n        const array = BubbleSort(createNonSortedArray());\r\n        console.log('bubbleSort: ', array);\r\n    }\r\n}\r\n//# sourceMappingURL=SortingTest.js.map",
-  "references": [
-    "D:/widgets/LayaDataStructuresAlgorithms/libs/laya/components/Script.ts",
-    "D:/widgets/LayaDataStructuresAlgorithms/src/algorithms/sorting/bubble-sort.ts"
-  ],
-  "map": "{\"version\":3,\"file\":\"SortingTest.js\",\"sourceRoot\":\"\",\"sources\":[\"../../../../src/script/SortingTest.ts\"],\"names\":[],\"mappings\":\"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAChD,OAAO,EAAE,UAAU,EAAE,MAAM,mCAAmC,CAAC;AAE/D,MAAM,CAAC,OAAO,OAAO,WAAY,SAAQ,MAAM;IAC3C;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAED,QAAQ;QACJ,IAAI,oBAAoB,GAAG,GAAG,EAAE;YAC5B,IAAI,KAAK,GAAG,EAAE,CAAC;YACf,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,CAAC,EAAE,CAAC,EAAE;gBAAC,KAAK,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC;YACzC,OAAO,KAAK,CAAC;QACjB,CAAC,CAAA;QAED,MAAM,KAAK,GAAG,UAAU,CAAC,oBAAoB,EAAE,CAAC,CAAC;QACjD,OAAO,CAAC,GAAG,CAAC,cAAc,EAAE,KAAK,CAAC,CAAC;IACvC,CAAC;CAEJ\"}"
-}

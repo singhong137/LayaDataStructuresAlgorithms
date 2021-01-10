@@ -339,7 +339,7 @@ window.Laya=window.Laya||{};
             array16.length = lt;
             for (let i = 0; i < lt; i++)
                 int16[i] = i++;
-            console.log('TypedArray:', int16);
+            console.log('TypedArray:', int16, array16);
         }
     }
 
@@ -766,7 +766,7 @@ window.Laya=window.Laya||{};
         constructor() {
             this.count = 0;
             this.lowestCount = 0;
-            this.items = {};
+            this.items = [];
         }
         enqueue(element) {
             this.items[this.count] = element;
@@ -792,7 +792,7 @@ window.Laya=window.Laya||{};
             return this.count - this.lowestCount;
         }
         clear() {
-            this.items = {};
+            this.items = [];
             this.count = 0;
             this.lowestCount = 0;
         }
@@ -1304,7 +1304,7 @@ window.Laya=window.Laya||{};
     class Stack {
         constructor() {
             this.count = 0;
-            this.items = {};
+            this.items = [];
         }
         push(element) {
             this.items[this.count] = element;
@@ -1330,7 +1330,7 @@ window.Laya=window.Laya||{};
             return this.items[this.count - 1];
         }
         clear() {
-            this.items = {};
+            this.items = [];
             this.count = 0;
         }
         toString() {
@@ -1545,46 +1545,6 @@ window.Laya=window.Laya||{};
             uf.union(2, 3);
             console.log(uf.connected(1, 4));
             console.log(uf.connected(1, 3));
-            let tb = [];
-            tb[77.8] = 0.134739;
-            let ssin = (n) => {
-                return tb[n];
-            };
-            console.time('a1');
-            let aa = 1;
-            for (let i = 0; i < 10000; i++) {
-                aa = Math.sin(77.8);
-            }
-            console.timeEnd('a1');
-            console.time('a2');
-            let bb = 1;
-            for (let j = 0; j < 10000; j++) {
-                bb = ssin(77.8);
-            }
-            console.timeEnd('a2');
-            console.time('a3');
-            let cc = 1;
-            for (let j = 0; j < 10000; j++) {
-                cc = tb[77.8];
-            }
-            console.timeEnd('a3');
-            let tb1 = [];
-            tb1[77.8] = 0.134739;
-            console.time('a4');
-            let dd = 1;
-            for (let j = 0; j < 10000; j++) {
-                dd = tb1[77.8];
-            }
-            console.timeEnd('a4');
-            let ff = (a, b) => {
-                return b(a);
-            };
-            console.time('a5');
-            let ee = 1;
-            for (let j = 0; j < 10000; j++) {
-                ee = ff(77.8, ssin);
-            }
-            console.timeEnd('a5');
         }
     }
     class UnionFind {
@@ -2078,8 +2038,8 @@ window.Laya=window.Laya||{};
             return false;
         }
         get(key) {
-            const valuePai = this.table[this.hashCode(key)];
-            return valuePai == null ? undefined : valuePai.value;
+            const valuePair = this.table[this.hashCode(key)];
+            return valuePair == null ? undefined : valuePair.value;
         }
         remove(key) {
             const hash = this.hashCode(key);
@@ -2665,6 +2625,7 @@ window.Laya=window.Laya||{};
             super();
         }
         onEnable() {
+            console.log('queue~~');
             const queue = new Queue();
             console.log(queue.isEmpty());
             queue.enqueue('John');
@@ -2677,7 +2638,7 @@ window.Laya=window.Laya||{};
             queue.dequeue();
             queue.dequeue();
             console.log(queue.toString());
-            console.log('--------');
+            console.log('deque~~');
             const deque = new Deque();
             console.log(deque.isEmpty());
             deque.addBack('John');
@@ -2740,7 +2701,7 @@ window.Laya=window.Laya||{};
             console.log('level', palindromeChecker('level'));
             console.log('was it a car or a cat i saw', palindromeChecker('was it a car or a cat i saw'));
             console.log('step on no pets', palindromeChecker('step on no pets'));
-            console.log('=================');
+            console.log('priorityQueue~~');
             const priorityQueue = new PriorityQueue();
             priorityQueue.enqueue(4);
             priorityQueue.enqueue(5);
@@ -3297,7 +3258,7 @@ window.Laya=window.Laya||{};
             stack1.push(5);
             stack1.push(8);
             stack1.clear();
-            let decimal2Binary = (decNum) => {
+            const decimal2Binary = (decNum) => {
                 const remStack = new Stack();
                 let number = decNum;
                 let rem;
@@ -3313,11 +3274,11 @@ window.Laya=window.Laya||{};
                 return binaryString;
             };
             console.log('decimal2Binary:');
-            console.log(decimal2Binary(233));
-            console.log(decimal2Binary(10));
-            console.log(decimal2Binary(1000));
-            console.log(decimal2Binary(13));
-            let baseConverter = (decNumber, base) => {
+            console.log('233 to ', decimal2Binary(233));
+            console.log('10 to ', decimal2Binary(10));
+            console.log('1000 to ', decimal2Binary(1000));
+            console.log('13 to ', decimal2Binary(13));
+            const baseConverter = (decNumber, base) => {
                 const remStack = new Stack();
                 const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                 let number = decNumber;
@@ -3335,10 +3296,10 @@ window.Laya=window.Laya||{};
                 return baseString;
             };
             console.log('baseConverter:');
-            console.log(baseConverter(100345, 2));
-            console.log(baseConverter(100345, 8));
-            console.log(baseConverter(100345, 16));
-            console.log(baseConverter(100345, 35));
+            console.log('100345 to binary', baseConverter(100345, 2));
+            console.log('100345 to octal', baseConverter(100345, 8));
+            console.log('100345 to hexadecimal', baseConverter(100345, 16));
+            console.log('100345 to 35 base', baseConverter(100345, 35));
         }
     }
 
