@@ -7,7 +7,7 @@ export default class DictionaryTest extends Script {
     }
 
     onEnable() {
-        console.log('DictionaryTest');
+        console.log('DictionaryTest~~');
 
         const dictionary = new Dictionary();
 

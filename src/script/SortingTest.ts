@@ -16,6 +16,8 @@ export default class SortingTest extends Script {
     }
 
     onEnable() {
+        console.log('Sorting test ~~');
+
         let createNonSortedArray = (l: number = 5) => {
             let array = [];
             for (let i = l; i > 0; i--)array.push(i);

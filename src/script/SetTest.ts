@@ -7,7 +7,7 @@ export default class SetTest extends Script {
     }
 
     onEnable() {
-        console.log('SET');
+        console.log('SET~~');
         const set = new Set<number>();
         set.add(1);
         console.log(set.values());

@@ -7,7 +7,7 @@ export default class HashTableTest extends Script {
     }
 
     onEnable() {
-        console.log('HashTableTest');
+        console.log('HashTableTest~~');
 
         // const hash = new HashTable();
         // const hash = new HashTableSeparateChaining();

@@ -8,7 +8,7 @@ export default class HeapTest extends Script {
     }
 
     onEnable() {
-        console.log('HeapTest');
+        console.log('HeapTest~~');
 
         const heap = new MinHeap();
         // const heap = new MaxHeap();

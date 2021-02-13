@@ -6,7 +6,7 @@ export default class RecursiveTest extends Script {
     }
 
     onEnable() {
-        console.log('RecursiveTest---');
+        console.log('RecursiveTest~~');
 
         const factorial = (n: number): number => {
             if (n === 1 || n === 0) return 1;

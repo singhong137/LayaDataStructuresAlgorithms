@@ -7,6 +7,7 @@ export default class LinkedListTest extends Script {
     }
 
     onEnable() {
+        console.log('LinkedListTest~~');
         // const list = new LinkedList();
         const list = new DoublyLinkedList();
 

@@ -7,6 +7,8 @@ export default class StackTest extends Script {
     }
 
     onEnable() {
+        console.log('Stack test ~~');
+
         const stack = new StackArray();
         console.log(stack.isEmpty());
 

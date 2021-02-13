@@ -14,7 +14,7 @@ export default class GraphTest extends Script {
     }
 
     onEnable() {
-        console.log('GraphTest---');
+        console.log('GraphTest~~');
 
         let graph = new Graph();
 
